@@ -6,7 +6,7 @@ export default function Home() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles}>Bem vinde!</Text>
+      <Text style={styles.title}>Bem vinde!</Text>
       <TouchableOpacity
         style={styles.button}
         onPress={() => navigation.navigate("Door")}

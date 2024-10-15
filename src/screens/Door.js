@@ -1,4 +1,4 @@
-import { View, FlatList } from "react-native";
+import { View, FlatList, StyleSheet } from "react-native";
 import DoorDet from "../components/DoorDet";
 
 const presentes = [
@@ -12,17 +12,17 @@ const presentes = [
 ];
 
 function Shuffle(array) {
-  for (let i = presentes.length - 1; i > 0; --i) {
+  for (let i = array.length - 1; i > 0; --i) {
     const j = (Math.floor(Math.random() * (i + 1))[
-      (presentes[i], presentes[j])
-    ] = [presentes[j], [presentes[i]]]);
-  }
+      (array[i], array[j])
+    ] = [array[j], [array[i]]]);
+  } return array
 }
 
 const portas = [
-  { id: "1", nome: "Porta número 1", gift: Shuffle(presentes) },
-  { id: "2", nome: "Porta número 2", gift: Shuffle(presentes) },
-  { id: "3", nome: "Porta número 3", gift: Shuffle(presentes) },
+  { id: "1", name: "Porta número 1", gift: Shuffle([...presentes]) },
+  { id: "2", name: "Porta número 2", gift: Shuffle([...presentes]) },
+  { id: "3", name: "Porta número 3", gift: Shuffle([...presentes]) },
 ];
 
 export default function Door() {
@@ -31,8 +31,12 @@ export default function Door() {
       <FlatList
         data={portas}
         keyExtractor={(item) => item.id}
-        renderItem={({ item }) => <DoorDet porta={item} />}
+        renderItem={({ item }) => (<DoorDet porta={item} />)}
       />
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+    
+});
