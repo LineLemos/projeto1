@@ -45,19 +45,19 @@ function Shuffle(array) {
 const portas = [
   {
     id: "1",
-    name: "Porta número 1",
+    name: "Porta Número 1",
     gift: Shuffle([...presentes]),
     image: require('../../assets/portaAmarela.png'),
   },
   {
     id: "2",
-    name: "Porta número 2",
+    name: "Porta Número 2",
     gift: Shuffle([...presentes]),
     image: require('../../assets/portaRosa.png')
   },
   {
     id: "3",
-    name: "Porta número 3",
+    name: "Porta Número 3",
     gift: Shuffle([...presentes]),
     image: require('../../assets/portaVerde.png'),
   },
@@ -77,5 +77,6 @@ export default function Door() {
 
 const styles = StyleSheet.create({
     container:{
+      
     },
 });

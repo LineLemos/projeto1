@@ -19,6 +19,7 @@ export default function App() {
             headerStyle: {
               backgroundColor: "pink",
             },
+            headerTintColor: "indianred",
           }}
         />
 
@@ -30,6 +31,7 @@ export default function App() {
             headerStyle: {
               backgroundColor: "pink",
             },
+            headerTintColor: "indianred",
           }}
         />
 
@@ -41,6 +43,7 @@ export default function App() {
             headerStyle: {
               backgroundColor: "pink",
             },
+            headerTintColor: "indianred",
           }}
         />
       </Stack.Navigator>

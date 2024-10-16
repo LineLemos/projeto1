@@ -19,9 +19,10 @@ export default function DoorDet({ porta }) {
 
 const styles = StyleSheet.create({
   name: {
-    color: "black",
+    color: "indianred",
     fontSize: 20,
-    textAlign: 'center',
+    textAlign: "center",
+    fontWeight: "bold",
   },
   container: {
     backgroundColor: "lightpink",
@@ -30,10 +31,15 @@ const styles = StyleSheet.create({
     alignItems: "center",
     height: 217,
   },
-  
+
   image: {
     height: 170,
     width: 100,
     marginLeft: 27,
+    cursor: "pointer",
+
+    ":hover": {
+      backgroundColor: "#ff1493",
+    },
   },
 });
