@@ -8,13 +8,41 @@ import Details from "./src/screens/Details";
 const Stack = createStackNavigator();
 
 export default function App() {
-  
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Bem-vinde!" component={Home} />
-        <Stack.Screen name="Door" component={Door} />
-        <Stack.Screen name="Details" component={Details} />
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{
+            title: "Bem-vinde",
+            headerStyle: {
+              backgroundColor: "pink",
+            },
+          }}
+        />
+
+        <Stack.Screen
+          name="Door"
+          component={Door}
+          options={{
+            title: "Escolha uma porta",
+            headerStyle: {
+              backgroundColor: "pink",
+            },
+          }}
+        />
+
+        <Stack.Screen
+          name="Details"
+          component={Details}
+          options={{
+            title: "Prêmio",
+            headerStyle: {
+              backgroundColor: "pink",
+            },
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -2,14 +2,36 @@ import { View, FlatList, StyleSheet } from "react-native";
 import DoorDet from "../components/DoorDet";
 
 
+
 const presentes = [
-  "1 milhão de reais",
-  "tristeza e decepção",
-  "perfume de 700 reais",
-  "um projeto js",
-  "cocô",
-  "joãoX",
-  "livro dona benta",
+  {
+    name: "1 Milhão de Reais",
+    image: require("../../assets/DINERO.png"),
+  },
+  {
+    name: "Tristeza e Decepção",
+    image: require("../../assets/sad.png"),
+  },
+  {
+    name: "Um Perfume de R$700",
+    image: require("../../assets/perfume.png"),
+  },
+  {
+    name: "Um Projeto JS",
+    image: require("../../assets/JS.png"),
+  },
+  {
+    name: "Cocô",
+    image: require("../../assets/coco.png"),
+  },
+  {
+    name: "joãoX",
+    image: require("../../assets/joao.jpeg"),
+  },
+  {
+    name: "Um Livro Dona Benta",
+    image: require("../../assets/donaBenta.png"),
+  },
 ];
 
 function Shuffle(array) {
@@ -25,7 +47,7 @@ const portas = [
     id: "1",
     name: "Porta número 1",
     gift: Shuffle([...presentes]),
-    image: require('../../assets/portaAzul.png'),
+    image: require('../../assets/portaAmarela.png'),
   },
   {
     id: "2",
@@ -55,7 +77,5 @@ export default function Door() {
 
 const styles = StyleSheet.create({
     container:{
-      
-      alignSelf: 'center',
     },
 });

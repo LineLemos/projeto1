@@ -1,6 +1,7 @@
 import { useRoute } from "@react-navigation/native";
-import { Text, View, StyleSheet, ImageBackground } from "react-native";
+import { Text, View, StyleSheet, ImageBackground, Image} from "react-native";
 import React from 'react';
+
 
 export default function Details() {
   const route = useRoute();
@@ -16,15 +17,38 @@ export default function Details() {
       style={styles.imageBackground}
     >
       <View style={styles.container}>
-        <Text style={styles.title}>Você ganhou: {present}</Text>
+        <Text style={styles.title}>Você ganhou: {"\n"}{present.name}</Text>
+        <Image source={present.image} style={styles.image} />
       </View>
     </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 50,
+  },
+
   imageBackground: {
     height: 700,
-    flex: 1,
+  },
+
+  title: {
+    textAlign: "center",
+    fontSize: 24,
+    color: "#fff",
+    backgroundColor: "#db7093",
+    gap: 0,
+    borderRadius: 6,
+    width: 500,
+  },
+
+  image: {
+    height: 130,
+    width: 120,
+    borderRadius: 100,
+    marginTop: 78,
   },
 });
