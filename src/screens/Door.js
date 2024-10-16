@@ -1,6 +1,7 @@
 import { View, FlatList, StyleSheet } from "react-native";
 import DoorDet from "../components/DoorDet";
 
+
 const presentes = [
   "1 milhão de reais",
   "tristeza e decepção",
@@ -20,14 +21,29 @@ function Shuffle(array) {
 }
 
 const portas = [
-  { id: "1", name: "Porta número 1", gift: Shuffle([...presentes]) },
-  { id: "2", name: "Porta número 2", gift: Shuffle([...presentes]) },
-  { id: "3", name: "Porta número 3", gift: Shuffle([...presentes]) },
+  {
+    id: "1",
+    name: "Porta número 1",
+    gift: Shuffle([...presentes]),
+    image: require('../../assets/portaAzul.png'),
+  },
+  {
+    id: "2",
+    name: "Porta número 2",
+    gift: Shuffle([...presentes]),
+    image: require('../../assets/portaRosa.png')
+  },
+  {
+    id: "3",
+    name: "Porta número 3",
+    gift: Shuffle([...presentes]),
+    image: require('../../assets/portaVerde.png'),
+  },
 ];
 
 export default function Door() {
   return (
-    <View>
+    <View style={styles.container}>
       <FlatList
         data={portas}
         keyExtractor={(item) => item.id}
@@ -38,5 +54,8 @@ export default function Door() {
 }
 
 const styles = StyleSheet.create({
-    
+    container:{
+      
+      alignSelf: 'center',
+    },
 });
